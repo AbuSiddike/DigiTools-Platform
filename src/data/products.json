@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality content with advanced AI writing assistance for blogs, emails, and more.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "AI-powered content generation",
+      "Grammar & style correction",
+      "50+ writing templates",
+      "Multi-language support"
+    ],
+    "icon": "./assets/writing_2327400 1.png"
+  },
+  {
+    "id": 2,
+    "name": "Design Template Pack",
+    "description": "Access 500+ professionally crafted design templates for social media, presentations, and marketing.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": [
+      "500+ premium templates",
+      "Customizable layouts",
+      "Social media ready",
+      "Commercial license"
+    ],
+    "icon": "./assets/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "Premium Stock Assets",
+    "description": "Unlimited access to high-quality stock photos, illustrations, and vector graphics.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "1M+ stock photos",
+      "Vector illustrations",
+      "4K resolution",
+      "Royalty-free license"
+    ],
+    "icon": "./assets/shopping-cart.png"
+  },
+  {
+    "id": 4,
+    "name": "Automation Toolkit",
+    "description": "Automate repetitive tasks and workflows to save time and boost your team's efficiency.",
+    "price": 59,
+    "period": "yearly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "Visual workflow builder",
+      "100+ integrations",
+      "Scheduled automations",
+      "Analytics dashboard"
+    ],
+    "icon": "./assets/operation.png"
+  },
+  {
+    "id": 5,
+    "name": "Resume Builder Pro",
+    "description": "Create stunning, ATS-optimized resumes with AI suggestions and professional templates.",
+    "price": 15,
+    "period": "one-time",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": [
+      "ATS optimization",
+      "50+ resume templates",
+      "AI content suggestions",
+      "PDF & DOCX export"
+    ],
+    "icon": "./assets/portfolio.png"
+  },
+  {
+    "id": 6,
+    "name": "Social Media Content Kit",
+    "description": "Plan, create, and schedule engaging social media content with our all-in-one toolkit.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "Content calendar",
+      "Post scheduler",
+      "Analytics tracking",
+      "Hashtag generator"
+    ],
+    "icon":  "./assets/social-media.png"
+  }
+]

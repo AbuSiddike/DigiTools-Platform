@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import StatsBar from '../components/StatsBar';
-import Footer from '../components/Footer';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import StatsBar from './components/StatsBar';
+import Footer from './components/Footer';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -12,6 +12,12 @@ function App() {
       <Navbar cartCount={cart.length} />
       <Hero />
       <StatsBar />
+       <MainSection
+        cart={cart}
+        onAddToCart={handleAddToCart}
+        onRemoveFromCart={handleRemoveFromCart}
+        onCheckout={handleCheckout}
+      />
       <Footer />
     </div>
   );
