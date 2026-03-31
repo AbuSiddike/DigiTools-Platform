@@ -7,7 +7,7 @@ import Hero from './components/Hero';
 import Home from './components/Home';
 import Steps from "./components/Steps";
 import CardPricing from "./components/CardPricing";
-// import CTABanner from "./components/CTABanner";
+import CTABanner from "./components/CTABanner";
 import Footer from './components/Footer';
 
 function App() {
@@ -67,7 +67,7 @@ function App() {
       />
       <Steps />
       <CardPricing />
-      {/* <CTABanner /> */}
+      <CTABanner />
       <Footer />
       {/* <ToastContainer /> */}
     </div>
