@@ -57,7 +57,7 @@ const Home = ({ cart, onAddToCart, onRemoveFromCart, onCheckout }) => {
 
           {cart.length === 0 ? (
             <div className="text-center py-12">
-              <span className="text-5xl block mb-4">🛒</span>
+              <span className="text-5xl block mb-4"><img src="./assets/shopping-cart.png" alt="" /></span>
               <h4 className="text-lg font-semibold text-gray-700 mb-2">
                 Your cart is empty
               </h4>
