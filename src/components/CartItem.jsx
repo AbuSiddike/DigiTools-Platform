@@ -14,7 +14,7 @@ const CartItem = ({ item, onRemove }) => {
         onClick={() => onRemove(item.id)}
         className="text-red-400 hover:text-red-600 text-xl font-bold transition"
       >
-        ✕
+        Remove
       </button>
     </div>
   );
