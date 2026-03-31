@@ -5,8 +5,8 @@ import Navbar from './components/Navbar';
 import StatsBar from './components/StatsBar';
 import Hero from './components/Hero';
 import Home from './components/Home';
-// import Steps from "./components/Steps";
-// import Pricing from "./components/Pricing";
+import Steps from "./components/Steps";
+import CardPricing from "./components/CardPricing";
 // import CTABanner from "./components/CTABanner";
 import Footer from './components/Footer';
 
@@ -48,7 +48,7 @@ function App() {
       return;
     }
     setCart([]);
-    toast.success('Checkout successful! Thank you for your purchase! 🎉', {
+    toast.success('Checkout successful! Thank you for your purchase!', {
       position: 'top-center',
       autoClose: 3000,
     });
@@ -65,8 +65,8 @@ function App() {
         onRemoveFromCart={handleRemoveFromCart}
         onCheckout={handleCheckout}
       />
-      {/* <Steps /> */}
-      {/* <Pricing /> */}
+      <Steps />
+      <CardPricing />
       {/* <CTABanner /> */}
       <Footer />
       {/* <ToastContainer /> */}
