@@ -1,16 +1,34 @@
-# React + Vite
+#  DigiTools — Premium Digital Tools Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive e-commerce platform for digital tools built with React.js, Tailwind CSS, and DaisyUI. Browse premium software tools, manage your cart, and checkout seamlessly.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-5-7C3AED?style=for-the-badge)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Description
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+DigiTools is a feature-rich digital tools buying website where users can explore a curated collection of premium software tools across multiple categories. The platform offers an intuitive shopping experience with dynamic cart management, real-time notifications, and a seamless checkout process.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- **React.js 18** — Component-based UI library with hooks
+- **Tailwind CSS 4** — Utility-first CSS framework  
+- **DaisyUI** — Tailwind component library
+- **React Toastify** — Toast notification system
+- **React Icons** — Icon library
+- **Vite** — Next-gen frontend build tool
+
+---
+
+## Top 3 Features
+
+1. **Smart Cart System** — Add products to cart with duplicate prevention, real-time cart count in navbar, remove individual items, and complete checkout with a single click.
+
+2. **Interactive Product/Cart Toggle** — Seamlessly switch between product catalog (3-column grid) and cart view with smooth transitions and responsive layouts.
+
+3. **Toast Notifications** — Beautiful, color-coded notifications for every user action — success for adding, error for removing, and celebratory checkout confirmation.
