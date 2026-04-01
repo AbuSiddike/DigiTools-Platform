@@ -1,10 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-    themes: light --default;
-}
+@plugin "daisyui";
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
-@theme {
-    --color-brand: #7C3AED;
-  --color-brand-dark: #6C3CE1;
-  --color-brand-light: #8B5CF6;
+body {
+  font-family: 'Geist', sans-serif;
 }
