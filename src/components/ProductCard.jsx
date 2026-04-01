@@ -19,7 +19,6 @@ const ProductCard = ({ product, onAddToCart }) => {
 
   return (
     <div className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-purple-100 transition-all duration-300 flex flex-col">
-      {/* Top */}
       <div className="flex justify-between items-start mb-4">
         <div className="w-11 h-11 bg-purple-50 rounded-xl flex items-center justify-center text-[22px]">
           {product.icon}
@@ -33,12 +32,10 @@ const ProductCard = ({ product, onAddToCart }) => {
         </span>
       </div>
 
-      {/* Name */}
       <h3 className="text-[16px] font-bold text-gray-900 mb-1">
         {product.name}
       </h3>
 
-      {/* Price */}
       <div className="mb-3">
         <span className="text-[24px] font-extrabold text-gray-900">
           ${product.price}
@@ -46,12 +43,10 @@ const ProductCard = ({ product, onAddToCart }) => {
         <span className="text-gray-400 text-[13px]">/{product.period}</span>
       </div>
 
-      {/* Description */}
       <p className="text-gray-400 text-[13px] leading-relaxed mb-5 flex-grow">
         {product.description}
       </p>
 
-      {/* Features */}
       <ul className="space-y-2.5 mb-6">
         {product.features.map((f, i) => (
           <li

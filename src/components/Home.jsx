@@ -27,6 +27,7 @@ const Home = ({ cart, onAddToCart, onRemoveFromCart, onCheckout }) => {
         >
           Product
         </button>
+
         <button
           onClick={() => setActiveTab('cart')}
           className={`px-6 py-2.5 rounded-lg font-medium text-sm transition ${
@@ -35,7 +36,7 @@ const Home = ({ cart, onAddToCart, onRemoveFromCart, onCheckout }) => {
               : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
           }`}
         >
-          Cart
+          Cart {cart.length > 0 && `(${cart.length})`}
         </button>
       </div>
 
@@ -57,7 +58,9 @@ const Home = ({ cart, onAddToCart, onRemoveFromCart, onCheckout }) => {
 
           {cart.length === 0 ? (
             <div className="text-center py-12">
-              <span className="text-5xl block mb-4"><img src="./assets/shopping-cart.png" alt="" /></span>
+              <span className="text-5xl block mb-4">
+                <img src="./assets/shopping-cart.png" alt="" />
+              </span>
               <h4 className="text-lg font-semibold text-gray-700 mb-2">
                 Your cart is empty
               </h4>
