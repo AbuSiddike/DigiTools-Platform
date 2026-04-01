@@ -1,47 +1,49 @@
+import { FiCheck } from 'react-icons/fi';
+
 const CardPricing = () => {
   const plans = [
     {
       name: 'Starter',
-      price: '$0',
+      price: '0',
       period: '/month',
-      description: 'Perfect for trying out our basic tools.',
+      description: 'Perfect for getting started',
       features: [
-        { text: '3 Digital Tools', included: true },
-        { text: 'Basic Support', included: true },
-        { text: '5GB Storage', included: true },
-        { text: 'Team Collaboration', included: false },
-        { text: 'Advanced Analytics', included: false },
+        { text: 'Access to 10 free tools', included: true },
+        { text: 'Basic templates', included: true },
+        { text: 'Community support', included: true },
+        { text: '1 project per month', included: true },
       ],
       highlighted: false,
-      buttonText: 'Get Started',
+      buttonText: 'Get Started Free',
     },
     {
       name: 'Pro',
-      price: '$29',
+      price: '29',
       period: '/month',
-      description: 'Best for professionals who need powerful tools.',
+      description: 'Best for professionals',
       badge: 'Most Popular',
       features: [
-        { text: '15 Digital Tools', included: true },
-        { text: 'Priority Support', included: true },
-        { text: '50GB Storage', included: true },
-        { text: 'Team Collaboration', included: true },
-        { text: 'Advanced Analytics', included: false },
+        { text: 'Access to all premium tools', included: true },
+        { text: 'Unlimited templates', included: true },
+        { text: 'Priority support', included: true },
+        { text: 'Unlimited projects', included: true },
+        { text: 'Advanced analytics', included: false },
       ],
       highlighted: true,
-      buttonText: 'Get Started',
+      buttonText: 'Start Pro Trial',
     },
     {
       name: 'Enterprise',
-      price: '$99',
+      price: '99',
       period: '/month',
-      description: 'For teams that need unlimited access and support.',
+      description: 'For teams and businesses',
       features: [
-        { text: 'Unlimited Tools', included: true },
-        { text: '24/7 Support', included: true },
-        { text: 'Unlimited Storage', included: true },
-        { text: 'Team Collaboration', included: true },
-        { text: 'Advanced Analytics', included: true },
+        { text: 'Everything in Pro', included: true },
+        { text: 'Team collaboration', included: true },
+        { text: 'Custom integrations', included: true },
+        { text: 'Dedicated support', included: true },
+        { text: 'SLA guarantee', included: true },
+        { text: 'Custom branding', included: true },
       ],
       highlighted: false,
       buttonText: 'Contact Sales',
@@ -49,101 +51,54 @@ const CardPricing = () => {
   ];
 
   return (
-    <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+    <section className="py-20 px-6 bg-gray-50/50">
+      <div className="max-w-7xl mx-auto text-center">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#1a1a1a] mb-4">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-gray-500 mt-3 max-w-lg mx-auto">
+          <p className="text-gray-500 font-medium max-w-lg mx-auto">
             Choose a plan that works best for you and your team. No hidden fees.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-12">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`rounded-2xl p-6 md:p-8 flex flex-col ${
-                plan.highlighted
-                  ? 'bg-[#7C3AED] text-white shadow-2xl scale-105'
-                  : 'bg-white border border-gray-200 shadow-sm'
-              }`}
+              className={`
+                relative flex flex-col p-10 rounded-3xl border-2
+                ${plan.highlighted ? 'bg-[#7922f8] text-white md:scale-105 border-[#7922f8]' : 'bg-white border-gray-200 text-gray-900 md:scale-95'}
+                shadow-2xl shadow-[#7922f8]/40 transition-all duration-500 ease-out
+                hover:shadow-3xl hover:shadow-[#7922f8]/60 hover:-translate-y-3
+              `}
             >
               {plan.badge && (
-                <span className="bg-white text-[#7C3AED] text-xs font-bold px-3 py-1 rounded-full self-start mb-4">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-100 text-orange-600 px-5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-md">
                   {plan.badge}
-                </span>
+                </div>
               )}
 
-              <h3
-                className={`text-lg font-bold ${
-                  plan.highlighted ? 'text-white' : 'text-gray-900'
-                }`}
-              >
-                {plan.name}
-              </h3>
+              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+              <p className="text-sm font-medium mb-6">{plan.description}</p>
 
-              <div className="mt-2 mb-3">
-                <span className="text-4xl font-bold">{plan.price}</span>
-                <span
-                  className={`text-sm ${
-                    plan.highlighted ? 'text-white/70' : 'text-gray-400'
-                  }`}
-                >
-                  {plan.period}
-                </span>
+              <div className="flex items-baseline mb-8">
+                <span className="text-5xl font-extrabold">${plan.price}</span>
+                <span className="font-bold ml-1">{plan.period}</span>
               </div>
 
-              <p
-                className={`text-sm mb-6 ${
-                  plan.highlighted ? 'text-white/80' : 'text-gray-500'
-                }`}
-              >
-                {plan.description}
-              </p>
-
-              <ul className="space-y-3 mb-8 flex-grow">
+              <ul className="space-y-4 mb-10 flex-1">
                 {plan.features.map((feature, fIndex) => (
-                  <li key={fIndex} className="flex items-center gap-2 text-sm">
+                  <li
+                    key={fIndex}
+                    className="flex items-center gap-3 text-sm font-bold"
+                  >
                     {feature.included ? (
-                      <svg
-                        className={`w-4 h-4 flex-shrink-0 ${
-                          plan.highlighted ? 'text-white' : 'text-[#7C3AED]'
-                        }`}
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                      <FiCheck className="text-xl shrink-0" />
                     ) : (
-                      <svg
-                        className={`w-4 h-4 flex-shrink-0 ${
-                          plan.highlighted ? 'text-white/40' : 'text-gray-300'
-                        }`}
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                      <span className="w-5 h-5 shrink-0 border rounded-full border-gray-300 block" />
                     )}
-                    <span
-                      className={
-                        !feature.included
-                          ? plan.highlighted
-                            ? 'text-white/40'
-                            : 'text-gray-300'
-                          : ''
-                      }
-                    >
+                    <span className={feature.included ? '' : 'opacity-50'}>
                       {feature.text}
                     </span>
                   </li>
@@ -151,11 +106,12 @@ const CardPricing = () => {
               </ul>
 
               <button
-                className={`w-full py-3 rounded-lg font-medium transition ${
-                  plan.highlighted
-                    ? 'bg-white text-[#7C3AED] hover:bg-gray-100'
-                    : 'bg-[#7C3AED] text-white hover:bg-[#6C3CE1]'
-                }`}
+                className={`
+                  w-full py-4 rounded-2xl font-bold uppercase tracking-widest text-xs
+                  ${plan.highlighted ? 'bg-white text-[#4f38f6]' : 'bg-[linear-gradient(to_right,#4f38f6,#7922f8,#9315fa)] text-white'}
+                  transition-all duration-500 ease-out
+                  hover:scale-[1.03] active:scale-[0.98] shadow-xl shadow-black/10
+                `}
               >
                 {plan.buttonText}
               </button>

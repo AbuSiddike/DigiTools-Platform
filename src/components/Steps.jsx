@@ -1,56 +1,60 @@
+import { FiUser, FiPackage, FiZap } from 'react-icons/fi';
+
 const Steps = () => {
   const steps = [
     {
-      image: '../assets/user.png',
+      id: '01',
+      icon: <FiUser className="text-5xl text-[#7922f8]" />,
       title: 'Create Account',
       description:
         'Sign up for free and set up your personal profile in minutes.',
     },
     {
-      image: '../assets/package.png',
+      id: '02',
+      icon: <FiPackage className="text-5xl text-[#7922f8]" />,
       title: 'Choose Products',
       description: 'Browse our curated collection and pick the tools you need.',
     },
     {
-      image: '../assets/rocket.png',
+      id: '03',
+      icon: <FiZap className="text-5xl text-[#7922f8]" />,
       title: 'Start Creating',
       description: 'Download and start using your tools to boost productivity.',
     },
   ];
 
   return (
-    <section className="bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+    <section className="py-20 px-6 bg-gray-50/50">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">
             Get Started in 3 Steps
           </h2>
+          <p className="text-gray-500 font-medium max-w-lg mx-auto">
+            Start using premium digital tools in minutes, not hours.
+          </p>
         </div>
 
-        
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4">
-          {steps.map((step, index) => (
-            <div key={index} className="flex items-center">
-        
-              <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100 w-64">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">{step.icon}</span>
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-sm text-gray-500">{step.description}</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          {steps.map((step) => (
+            <div
+              key={step.id}
+              className="relative bg-white p-10 rounded-3xl shadow-sm border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group"
+            >
+              <div className="absolute top-8 right-8 w-10 h-10 rounded-full bg-gradient-to-br from-[#4f38f6] to-[#9315fa] text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-purple-200">
+                {step.id}
               </div>
 
-        
-              {index < steps.length - 1 && (
-                <div className="hidden md:flex items-center mx-2">
-                  <div className="flex gap-1">
-                    <span className="w-2 h-2 bg-[#7C3AED] rounded-full"></span>
-                    <span className="w-2 h-2 bg-[#7C3AED]/60 rounded-full"></span>
-                    <span className="w-2 h-2 bg-[#7C3AED]/30 rounded-full"></span>
-                  </div>
-                </div>
-              )}
+              <div className="w-24 h-24 rounded-full bg-purple-50 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                {step.icon}
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                {step.title}
+              </h3>
+              <p className="text-gray-500 text-sm leading-relaxed font-medium">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>

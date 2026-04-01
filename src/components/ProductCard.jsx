@@ -71,14 +71,17 @@ const ProductCard = ({ product, onAddToCart }) => {
         ))}
       </ul>
 
-      {/* Button */}
       <button
         onClick={handleBuy}
-        className={`w-full py-2.5 rounded-xl text-[13px] font-semibold transition-all duration-300 cursor-pointer ${
-          added
-            ? 'bg-emerald-500 text-white'
-            : 'bg-[#7C3AED] hover:bg-[#6D28D9] text-white shadow-sm hover:shadow-md hover:shadow-purple-200'
-        }`}
+        className={`
+    w-full py-2.5 rounded-xl text-[13px] font-semibold uppercase tracking-widest
+    transition-all duration-500 cursor-pointer
+    ${
+      added
+        ? 'bg-emerald-500 text-white shadow-md'
+        : 'text-white bg-[linear-gradient(to_right,#4f38f6,#7922f8,#9315fa)] bg-[length:200%_auto] bg-left hover:bg-right hover:scale-105 active:scale-95 shadow-lg hover:shadow-[#7922f8]/40'
+    }
+  `}
       >
         {added ? '✓ Added to Cart' : 'Buy Now'}
       </button>
